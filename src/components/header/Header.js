@@ -1,22 +1,28 @@
 import { Link } from 'react-router-dom'
 import logo from '../../midia/logo.png'
+import Dropdown from '../dropdown/Dropdown'
+import NavDrop from './NavDrop'
+
+
 
 export default function Home() {
     return (
         <div>
-            <div className=' flex  bg-blue-950 pl-12 py-8 h-24 items-center '>
-                <img src={logo} alt="logo" className='h-28' />
-                <nav className='text-yellow-400/75 text-lg font-bold text-center flex justify-end space-x-20  w-full tracking-widest w-1/2 pr-12'>
-                    <Link to='/' className='justify-center'>Home</Link>
-                    <Link to='/Sobre'>Quem Somos</Link>
-                    <Link to='/AdvogadosParceiros'>Advogados Parceiros</Link>
-                    {/* AQUI VAI O DROPDOWN
-                    LOGIN
-                    CADASTRO
-                */}
-                </nav>
-            </div>
-        </div >
+            <div className='bg-gray-100 flex items-center h-30'>
+                <img src={logo} alt="logo" className='ml-20 max-lg:ml-1 max-lg:w-56 max-sm:w-56' />
+                <nav className="font-medium flex justify-center w-full pl-5 space-x-60 mr-10 ">
+                    <Link to='/' className="hover:text-yellow-600 max-lg:hidden ">Home</Link>
+                    <Link to='/Sobre' className="hover:text-yellow-600 max-lg:hidden">Quem Somos</Link>
+                    <Link to='/AdvogadosParceiros' className="hover:text-yellow-600 max-lg:hidden">Advogados Parceiros</Link>
+                    <div>
+                        <Dropdown />
+                        <NavDrop />
+                    </div>
 
+                </nav>
+
+
+            </div >
+        </div>
     )
 }

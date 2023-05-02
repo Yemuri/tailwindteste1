@@ -5,9 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        'bg-fundo-roxo': '#240E87'
-      }
     },
   },
   plugins: [],
